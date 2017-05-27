@@ -56,7 +56,7 @@ public class CursoJavaEITClase5 {
         for(String e : nombres){                      //for each
             System.out.println(e);            
         }
-        System.out.println(nombres.indexOf("Arribas"));*/
+        System.out.println(nombres.indexOf("Arribas"));
         Set <Persona> personas = new HashSet<>();
         personas.add(new Persona("Juan", "10"));
         personas.add(new Persona("Juan", "10"));
@@ -72,9 +72,14 @@ public class CursoJavaEITClase5 {
         ordenados.add("a");
         ordenados.add("c");
         for(String l : ordenados)
-            System.out.println(l);       
-       
-        
+            System.out.println(l); */
+        SortedSet<Persona> personas2 = new TreeSet<Persona>();        
+        personas2.add(new Persona("Juan", "20123"));
+        personas2.add(new Persona("Pedro", "101"));
+        personas2.add(new Persona("Alvaro", "303"));        
+        for(Persona p : personas2){           
+            System.out.println(p);
+        }
 
     }
     

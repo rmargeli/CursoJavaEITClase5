@@ -8,7 +8,7 @@ package cursojavaeitclase5;
 import java.util.Objects;
 
 
-public class Persona {
+public class Persona implements Comparable <Persona> {
     private String dni;
     private String nombre;
 
@@ -19,7 +19,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona:{" + "dni=" + dni + ", nombre=" + nombre + '}';
+        return "Persona:" + "dni=" + dni + ", nombre=" + nombre ;
     }
 
     @Override
@@ -65,6 +65,17 @@ public class Persona {
         this.nombre = nombre;
     }
     
+    public int compareTo (Persona otra){
+        try{
+            Integer a = Integer.parseInt(otra.dni);
+            Integer b = Integer.parseInt(dni);
+            return b.compareTo(a);    
+        }
+        catch(NumberFormatException e){
+            System.out.println("El DNI no es valido.");
+            return 0;
+        }        
+    }    
     
     
 }
